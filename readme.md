@@ -6,14 +6,12 @@ It's quick and dirty by design. Lots of flexibility, and not a lot of dependenci
 
 Post-Deployment Config Script: [bit.ly/nate-dev](https://bit.ly/nate-dev)
 
-from an Administrative PowerShell console
+from an Administrative PowerShell console (5.1)
 ``` powershell
 Set-ExecutionPolicy Unrestricted -Force; 
-
 pre-req script : Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force; Install-Module InvokeBuild -Force; Import-Module InvokeBuild
-Invoke-Build -File C:\Initialize-DevWorkstation.ps1
 
-iex '$((iwr bit.ly/nate-dev -usebasicparsing).Content)' | out-file c:\Initialize.ps1; c:\initialize.ps1 -UACNoConsent 
+iex '$((iwr bit.ly/nate-dev -usebasicparsing).Content)' | out-file c:\Initialize-DevWorkstation.ps1; Invoke-Build -File c:\Initialize-DevWorkstation.ps1
 ```
 
 ## Behind the Scenes
