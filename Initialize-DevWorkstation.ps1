@@ -42,6 +42,13 @@ task . PowerShellModule, UpdatePSPrompt, ChocoInstall, NPMPackageInstall, GitCon
 task PowerShellModule {
     Install-Module posh-git -Scope CurrentUser -Force
     Install-Module oh-my-posh -Scope CurrentUser -Force
+
+    # PS7
+    Save-Module posh-git | C:\Users\$($env:username)\Documents\PowerShell\Modules
+    Save-Module oh-my-posh | C:\Users\$($env:username)\Documents\PowerShell\Modules
+
+    # Nice to have local help available - WIP
+    #Update-Help -Force
 }
 
 task UpdatePSPrompt {
