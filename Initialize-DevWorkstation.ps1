@@ -1,3 +1,6 @@
+#Requires -RunAsAdministrator
+#Requires -Modules InvokeBuild
+
 #apps
 $Apps = @(
     # Business Apps
