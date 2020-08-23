@@ -44,8 +44,8 @@ task PowerShellModule {
     Install-Module oh-my-posh -Scope CurrentUser -Force
 
     # PS7
-    Save-Module posh-git | C:\Users\$($env:username)\Documents\PowerShell\Modules
-    Save-Module oh-my-posh | C:\Users\$($env:username)\Documents\PowerShell\Modules
+    Save-Module -Name posh-git -Path "C:\Users\$($env:username)\Documents\PowerShell\Modules"
+    Save-Module -Name oh-my-posh -Path "C:\Users\$($env:username)\Documents\PowerShell\Modules"
 
     # Nice to have local help available - WIP
     #Update-Help -Force
@@ -123,3 +123,7 @@ task TerminalConfig {
     Set-Content -Value $wtProfileContent -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json"
 }
 
+task Upgrade {
+    #upgrade all chococolatey packages
+    choco upgrade all -y 
+}
