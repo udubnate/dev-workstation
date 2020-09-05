@@ -37,7 +37,7 @@ $Apps = @(
     'wsl2'
 )
 
-task . PowerShellModule, UpdatePSPrompt, ChocoInstall, NPMPackageInstall, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, InstallNugetProvider, TerminalConfig
+task . PowerShellModule, UpdatePSPrompt, ChocoInstall, NPMPackageInstall, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, InstallNugetProvider, TerminalConfig, AutoUpgrade
 
 task PowerShellModule {
     Install-Module posh-git -Scope CurrentUser -Force
@@ -123,6 +123,9 @@ task TerminalConfig {
     Set-Content -Value $wtProfileContent -Path "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json"
 }
 
+task AutoUpgrade {
+    choco install choco-upgrade-all-at --params "'/WEEKLY:yes /DAY:WED /TIME:01:00'" -y
+}
 task Upgrade {
     #upgrade all chococolatey packages
     choco upgrade all -y 
