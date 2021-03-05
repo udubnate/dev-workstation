@@ -33,7 +33,7 @@ $Apps = @(
     'wsl2'
 )
 
-task . PowerShellModule, UpdatePSPrompt, ChocoInstall, NPMPackageInstall, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, InstallNugetProvider, TerminalConfig, AutoUpgrade
+task . PowerShellModule, UpdatePSPrompt, ChocoInstall, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, InstallNugetProvider, TerminalConfig, AutoUpgrade
 
 task PowerShellModule {
     Install-Module posh-git -Scope CurrentUser -Force
@@ -72,11 +72,6 @@ task ChocoInstall {
     foreach ($app in $Apps) {
         cinst $app -y
     }
-}
-
-task NPMPackageInstall {
-    # Install Node packages for developing VS Code extensions
-    npm install -g yo generator-code vsce typescript
 }
 
 task GitConfig {
