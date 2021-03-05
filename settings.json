@@ -39,7 +39,7 @@
                 "commandline": "powershell.exe",
                 "fontSize" : 9,
                 "fontFace":  "Cascadia Code PL",
-                "backgroundImage" : "C:\\Users\\nathbr\\OneDrive\\Pictures\\ComputerBackgrounds\\huskies.jpg",
+                "backgroundImage" : "%USERPROFILE%\\OneDrive\\Pictures\\ComputerBackgrounds\\huskies.jpg",
                 "backgroundImageOpacity" : 0.25,
                 "backgroundImageStretchMode": "uniform",
                 "hidden": false
@@ -73,7 +73,7 @@
                 "source": "Windows.Terminal.PowershellCore",
                 "fontSize" : 9,
                 "fontFace":  "Cascadia Code PL",
-                "backgroundImage" : "C:\\Users\\nathbr\\OneDrive\\Pictures\\ComputerBackgrounds\\huskies.jpg",
+                "backgroundImage" : "%USERPROFILE%\\OneDrive\\Pictures\\ComputerBackgrounds\\huskies.jpg",
                 "backgroundImageOpacity" : 0.25,
                 "backgroundImageStretchMode": "uniform"
             }
