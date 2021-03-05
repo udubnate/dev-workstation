@@ -16,7 +16,7 @@ $Apps = @(
     'dotnetcore-sdk',
     'visualstudio2019professional',
     'visualstudio2019buildtools',
-    'cascadiafonts',
+    'cascadia-code-nerd-font',
     'nodejs',
     # Entertainment Apps
     #   'spotify',
