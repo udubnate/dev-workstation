@@ -52,7 +52,8 @@ task UpdatePSPrompt {
     $psProfileContent = (Invoke-WebRequest 'https://raw.githubusercontent.com/udubnate/dev-workstation/master/prompt.ps1' -UseBasicParsing).Content
 
     New-Item -ItemType Directory -Path "$($env:userprofile)\Documents\PowerShell" -Force | Out-Null
-    New-Item  -ItemType Directory -Path "$($env:userprofile)\Documents\WindowsPowerShell" -Force  | Out-Null
+    New-Item -ItemType Directory -Path "$($env:userprofile)\Documents\PowerShell\Modules" -Force | Out-Null
+    New-Item -ItemType Directory -Path "$($env:userprofile)\Documents\WindowsPowerShell" -Force  | Out-Null
 
     foreach ($proPath in @(
             "$($env:userprofile)\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
