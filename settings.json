@@ -28,7 +28,7 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "fontFace":  "Cascadia Code PL"
+            "fontFace":  "CaskaydiaCove Nerd Font"
         },
         "list":
         [
@@ -38,7 +38,7 @@
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
                 "fontSize" : 9,
-                "fontFace":  "Cascadia Code PL",
+                "fontFace":  "CaskaydiaCove Nerd Font",
                 "backgroundImage" : "%USERPROFILE%\\OneDrive\\Pictures\\ComputerBackgrounds\\huskies.jpg",
                 "backgroundImageOpacity" : 0.25,
                 "backgroundImageStretchMode": "uniform",
@@ -58,7 +58,7 @@
                 "source": "Windows.Terminal.Wsl",
                 "colorScheme": "UbuntuLegit",
                 "fontSize" : 9,
-                "fontFace":  "Cascadia Code PL"
+                "fontFace":  "CaskaydiaCove Nerd Font"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -72,7 +72,7 @@
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore",
                 "fontSize" : 9,
-                "fontFace":  "Cascadia Code PL",
+                "fontFace":  "CaskaydiaCove Nerd Font",
                 "backgroundImage" : "%USERPROFILE%\\OneDrive\\Pictures\\ComputerBackgrounds\\huskies.jpg",
                 "backgroundImageOpacity" : 0.25,
                 "backgroundImageStretchMode": "uniform"
@@ -100,7 +100,6 @@
             "cyan": "#06989A",
             "foreground": "#EEEEEE",
             "green": "#300A24",
-            "name": "UbuntuLegit",
             "purple": "#75507B",
             "red": "#CC0000",
             "white": "#D3D7CF",
