@@ -1,3 +1,3 @@
 Import-Module posh-git
 Import-Module oh-my-posh
-Set-Theme Powerlevel10k-Lean
+Set-PoshPrompt Powerlevel10k-Lean
