@@ -29,23 +29,13 @@ $Apps = @(
     'vlc',
     'powershell',
     'pwsh',
+    'oh-my-posh',
     'microsoft-windows-terminal',
     'wsl2'
 )
 
-task . PowerShellModule, UpdatePSPrompt, ChocoInstall, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, InstallNugetProvider, TerminalConfig, AutoUpgrade
+task . ChocoInstall, UpdatePSPrompt, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, InstallNugetProvider, TerminalConfig, AutoUpgrade
 
-task PowerShellModule {
-    Install-Module posh-git -Scope CurrentUser -Force
-    Install-Module oh-my-posh -Scope CurrentUser -Force
-
-    # PS7
-    Save-Module -Name posh-git -Path "C:\Users\$($env:username)\Documents\PowerShell\Modules"
-    Save-Module -Name oh-my-posh -Path "C:\Users\$($env:username)\Documents\PowerShell\Modules"
-
-    # Nice to have local help available - WIP
-    #Update-Help -Force
-}
 
 task UpdatePSPrompt {
     # Make for a neat looking PS prompt for each profile
