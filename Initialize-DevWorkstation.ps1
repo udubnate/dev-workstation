@@ -11,8 +11,6 @@ $Apps = @(
     'git.install',
     'vscode',
     'vscode-powershell',
-    'nugetpackageexplorer',
-    'nuget.commandline',
     'dotnetcore-sdk',
     'visualstudio2019professional',
     'visualstudio2019buildtools',
@@ -20,7 +18,6 @@ $Apps = @(
     'nodejs',
     # Entertainment Apps
     #   'spotify',
-    'discord.install',
     # Helpful Tools
     '7zip',
     'sysinternals',
@@ -34,7 +31,7 @@ $Apps = @(
     'wsl2'
 )
 
-task . ChocoInstall, UpdatePSPrompt, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, InstallNugetProvider, TerminalConfig, AutoUpgrade
+task . ChocoInstall, UpdatePSPrompt, GitConfig, SetupFolders, SetupWindowsExplorer, SetUAC, WSLv2, TerminalConfig, AutoUpgrade
 
 
 task UpdatePSPrompt {
@@ -93,11 +90,6 @@ task WSLv2 {
     dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
     wsl --set-default-version 2
-}
-
-task InstallNugetProvider {
-    # Setup PSGallery
-    Install-PackageProvider -Name Nuget -Scope CurrentUser -Force -Confirm:$false
 }
 
 task TerminalConfig {
